@@ -1,0 +1,62 @@
+/* Add your CSS styles here */
+body {
+  background: linear-gradient(to bottom, #6addec, #cac9c9);
+}
+
+/* Additional CSS styles for the form */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin:  auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* margin-top: 5px; */
+}
+
+input[type="submit"] {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* margin-top: 5px; */
+}
+
+.message1{
+  background-color: rgb(142, 223, 169);
+  font-weight: bold;
+  width: auto ;
+  height: 100%;
+  padding: 15px;
+  text-align: center;
+}

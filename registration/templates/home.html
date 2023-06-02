@@ -1,0 +1,66 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title> {% block title %}{% endblock title %}|Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static "app1/style.css" %}">
+  </head>
+  <body>
+    <!-- Static Navigation Bar -->
+    <nav>
+      <div class="logo">
+        <!-- <img src="logo.png" alt="Logo"> -->
+        <h1>TRACKO_WORLD</h1>
+      </div>
+      <ul>
+        <li><a href="{% url 'logout' %}" class="btn btn-primary">Logout</a></li>
+      </ul>
+    </nav>
+    <!-- Static Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'insertvendor' %}">Vendor-Details</a></li>
+        <li><a href="{% url 'form' %}">Invoice Entries</a></li>
+        <li><a href="{% url 'gstindetails' %}">GSTIN_DETAILS</a></li>
+      </ul>
+    </div>
+    <!-- Main Content -->
+    {% block body %}
+    <main>
+      <div class="big-layout">
+        <h2>Welcome to our Web Application</h2>
+        <p>Home Page</p>
+      </div>
+      <div class="small-layout">
+        <h3>Layout 1</h3>
+        <p>Content for Layout 1</p>
+      </div>
+      <div class="small-layout">
+        <h3>Layout 2</h3>
+        <p>Content for Layout 2</p>
+      </div>
+      <div class="small-layout">
+        <h3>Layout 2</h3>
+        <p>Content for Layout 2</p>
+      </div>
+      <div class="small-layout">
+        <h3>Layout 2</h3>
+        <p>Content for Layout 2</p>
+      </div>  <div class="small-layout">
+        <h3>Layout 2</h3>
+        <p>Content for Layout 2</p>
+      </div>  <div class="small-layout">
+        <h3>Layout 2</h3>
+        <p>Content for Layout 2</p>
+      </div>
+      <div class="big-layout">
+        <h2>THANK YOU</h2>
+        <p>@2023</p>
+      </div>
+    </main>
+    {% endblock body %}
+  </body>
+</html>

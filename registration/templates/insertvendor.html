@@ -1,0 +1,50 @@
+{% extends 'home.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  {% block title %}Form-Details{% endblock title %}
+ 
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static "app1/vendor.css" %}">
+
+
+<h1>Enter Vendor Details</h1>
+
+<form method="post" action="" id="form1">
+  {% csrf_token %}
+  <div>{% if message %}
+     <div class="message1">{{ message }}</div>
+{% endif %}
+</div>
+  <label for="vendor_name">Vendor Name:</label>
+  <input type="text" id="vendor_name" name="vendor_name" required>
+
+  {% comment %} <label for="vendor_code">Vendor Code:</label>
+  <input type="text" id="vendor_code" name="vendor_code" required> {% endcomment %}
+
+  <label for="vendor_address">Vendor Address:</label>
+  <input type="text" id="vendor_address" name="vendor_address" required>
+
+  {% comment %} <label for="vendor_gstin">Vendor GSTIN:</label>
+  <input type="text" id="vendor_gstin" name="vendor_gstin" required maxlength="15"> {% endcomment %}
+  <label for="vendor_gstin">Vendor GSTIN:</label>
+<input type="text" id="vendor_gstin" name="vendor_gstin"  title="Please enter a 15-digit GSTIN number." required maxlength="15">
+
+
+  <label for="contact_number">Contact Number:</label>
+  <input type="tel" id="contact_number" name="contact_number" required>
+
+  <label for="email_id">Email ID:</label>
+  <input type="email" id="email_id" name="email_id" required>
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+{% endblock body %}
+</html>

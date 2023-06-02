@@ -1,0 +1,81 @@
+{% extends 'home.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  {% block title %}Form-Details{% endblock title %}
+ 
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static "app1/form.css" %}">
+<h1>Enter GSTIN Data</h1>
+
+<form method="post" action="" id="form1">
+  {% if message %}
+
+<div class="message1">{{ message }}</div>
+{% endif %}
+  {% csrf_token %}
+  <label for="gstin_number">GSTIN Number:</label>
+  <input type="text" id="gstin_number" name="p_gstin_number" required maxlength="15">
+
+  {% comment %} <label for="vendor_code">Vendor Code:</label>
+  <input type="text" id="vendor_code" name="p_vendor_code" required> {% endcomment %}
+
+  <label for="hsn_code">HSN Code:</label>
+  <input type="text" id="hsn_code" name="p_hsn_code" required >
+
+  <label for="invoice_number">Invoice Number:</label>
+  <input type="text" id="invoice_number" name="p_invoice_number" required>
+
+  <label for="invoice_date">Invoice Date:</label>
+  <input type="date" id="invoice_date" name="p_invoice_date" required>
+
+  <label for="invoice_value">Invoice Value:</label>
+  <input type="number" id="invoice_value" name="p_invoice_value" required>
+
+  {% comment %} <label for="paid_status">Paid Status:</label>
+  <input type="text" id="paid_status" name="p_paid_status" > {% endcomment %}
+  <label for="paid_status">Paid Status:</label>
+<select id="paid_status" name="p_paid_status"required>
+  <option value="paid">Paid</option>
+  <option value="not_paid">Not Paid</option>
+</select>
+
+  <label for="qty">Quantity:</label>
+  <input type="number" id="qty" name="p_qty"required >
+
+  <label for="cost">Cost:</label>
+  <input type="number" id="cost" name="p_cost"required >
+
+  <label for="project_batch_code">Project Batch Code:</label>
+  <input type="text" id="project_batch_code" name="p_project_batch_code"  required >
+
+   <label for="financial_year">Financial Year:</label>
+  <input type="text" id="financial_year" name="p_financial_year" required>
+  {% comment %} <label for="financial_year">Financial Year:</label>
+<select id="financial_year" name="p_financial_year" required></select> {% endcomment %}
+
+  <label for="igst">IGST:</label>
+  <input type="text" id="igst" name="p_igst"required >
+
+  {% comment %} <label for="gstper">GST %:</label>
+  <input type="text" id="gstper" name="p_gstper" required> {% endcomment %}
+
+  <label for="cgst">CGST:</label>
+  <input type="text" id="cgst" name="p_cgst" required>
+
+  <label for="sgst">SGST:</label>
+  <input type="text" id="sgst" name="p_sgst" required>
+
+
+
+  <input type="submit" value="Submit"required>
+
+  
+</form>
+<script>
+
+</script>
+{% endblock body %}
+</html>

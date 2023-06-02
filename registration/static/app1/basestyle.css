@@ -1,0 +1,240 @@
+home page css */
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  background-color: #f2f2f2;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  padding: 20px;
+  overflow: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 60px;
+  margin-left: 220px;
+  padding: 20px;
+}
+
+
+
+  /* Custom CSS styles */
+      /* Add your custom styles here */
+      .big-layout {
+        /* Define styles for the big layout */
+        /* Example styles */
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+      .small-layout {
+        /* Define styles for the small layout */
+        /* Example styles */
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+
+/*updaated 30 05 2023*/
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+}
+.content {
+  flex-grow: 1;
+}
+
+/* 
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 100px;
+  background: #3c31dd;
+}
+
+.curve {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
+
+
+/* style.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .navbar-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar .navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar .navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f2f2f2;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 50px;
+}
+
+.sidebar .sidebar-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar .sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar .sidebar-links li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 200px; /* Adjust this value based on sidebar width */
+  padding: 20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .navbar .navbar-links {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

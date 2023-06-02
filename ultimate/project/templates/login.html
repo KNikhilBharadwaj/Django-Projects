@@ -1,0 +1,65 @@
+
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login</title>
+    
+</head>
+
+{% block body %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">
+                    Trackoworld</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div> -->
+
+        </div> 
+        <div class="content">
+            <h1>Trackoworld<br><span>Design</span> <br>Development</h1>
+            <p class="par">Address: 1No, 96/1, Hosur Rd, Srinivasa Nagar,<br>
+                Hal Layout, Singasandra, Bengaluru, Karnataka 560068<br>
+                 <!-- expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus  -->
+                <!-- <br> a quae totam ipsa illum minus laudantium?</p> -->
+
+
+                <button class="cn"><a href="https://www.google.com/maps/@12.8837572,77.6455297,3a,75y,276.31h,98.72t/data=!3m6!1e1!3m4!1sNGTQwtRVm2qsKxNasqffRA!2e0!7i13312!8i6656" class="btn">Location</a>
+                </button>
+ <div class="form">
+                    <h2>Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here">
+                    <input type="password" name="" placeholder="Enter Password Here">
+                    <button class="btnn"><a href="#">Login</a></button>
+
+                    <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a> here</a></p>
+                
+                </div>
+            
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    {% endblock body %}
+</html>
